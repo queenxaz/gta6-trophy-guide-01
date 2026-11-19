@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="The complete offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: official names, descriptions and grades, a checklist that saves in your browser, a platinum roadmap, missable warnings, and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Offline guide</p>
+    <h1>Leonida Legend</h1>
+    <p class="tagline">Every one of the 55 trophies — tracked, roadmapped, and explained with sources.</p>
+    <div class="progress-wrap" id="progress-wrap" aria-label="Trophy progress">
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <p class="progress-text" id="progress-text">Loading the trophy list&hellip;</p>
+    </div>
+    <div class="stat-row" id="stat-row"></div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button class="tab active" data-view="checklist" type="button">Checklist</button>
+  <button class="tab" data-view="roadmap" type="button">Platinum roadmap</button>
+  <button class="tab" data-view="missables" type="button">Missables</button>
+  <button class="tab" data-view="sources" type="button">Sources</button>
+</nav>
+
+<main>
+  <section id="view-checklist" class="view active" aria-label="Trophy checklist">
+    <div class="toolbar">
+      <label class="search-box">
+        <span class="visually-hidden">Search trophies</span>
+        <input type="search" id="search" placeholder="Search a trophy, mission or keyword&hellip;" autocomplete="off">
+      </label>
+      <div class="filters" id="kind-filters" role="group" aria-label="Filter by kind"></div>
+      <div class="toolbar-row">
+        <label class="select-label">Grade
+          <select id="grade-filter">
+            <option value="all">All grades</option>
+            <option value="platinum">Platinum</option>
+            <option value="gold">Gold</option>
+            <option value="silver">Silver</option>
+            <option value="bronze">Bronze</option>
+          </select>
+        </label>
+        <label class="select-label">Sort
+          <select id="sort-order">
+            <option value="roadmap">Roadmap order</option>
+            <option value="grade">Grade, best first</option>
+            <option value="name">Name A&ndash;Z</option>
+          </select>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="spoiler-toggle" checked>
+          <span>Hide spoilers</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="earned-only">
+          <span>Show earned only</span>
+        </label>
+      </div>
+      <div class="toolbar-row">
+        <button class="btn" id="export-btn" type="button">Export progress</button>
+        <button class="btn" id="import-btn" type="button">Import progress</button>
+        <input type="file" id="import-file" accept=".json,application/json" hidden>
+        <button class="btn btn-danger" id="reset-btn" type="button">Reset progress</button>
+        <span class="toolbar-note" id="list-count"></span>
+      </div>
+      <p class="spoiler-note" id="spoiler-note">Spoilers on: hidden trophies stay masked until you earn them. Turn the toggle off to reveal every name.</p>
+    </div>
+    <ol class="trophy-list" id="trophy-list"></ol>
+    <p class="empty-state" id="empty-state" hidden>No trophies match these filters. Try clearing the search or choosing another kind.</p>
+  </section>
+
+  <section id="view-roadmap" class="view" aria-label="Platinum roadmap">
+    <h2>The road to <span class="platinum-name">Vice Got a Price!</span></h2>
+    <p class="section-intro">One playthrough is enough: there is no difficulty trophy, no online trophy and no mission replay, so the order below is built from the official descriptions — which story chapters and missions, which collectibles and counts, in what order. Around 200 hours in total; the 100% checklist is the long half.</p>
+    <ol class="roadmap" id="roadmap"></ol>
+    <aside class="callout">
+      <h3>Save like a trophy hunter</h3>
+      <ul>
+        <li>Keep a manual save at the start of every chapter — there are 15 manual slots plus one autosave, and no mission replay.</li>
+        <li>Keep one untouched save from just before the final mission.</li>
+        <li>Never test cheats on your trophy save: cheats are expected to switch off trophies and saving for that session.</li>
+        <li>Turn on every progress and collectible notification in the settings, and check the in-game counters (Progress &gt; Stats, Progress &gt; Challenges, Progress &gt; Collections) as you go.</li>
+      </ul>
+      <p class="callout-source">Sources: <a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag — GTA 6 Trophy List</a> and <a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series">GTABase — GTA 6 Trophy Guide</a>.</p>
+    </aside>
+  </section>
+
+  <section id="view-missables" class="view" aria-label="Missable trophies">
+    <h2>Missables &amp; time-sensitive moments</h2>
+    <p class="section-intro">Almost everything can be done after the credits — the story trophies are unmissable and the side-story finales stay open. Only one trophy carries a real missable risk, plus one time-sensitive race. Both are flagged here, built from the official descriptions.</p>
+    <div id="missable-list"></div>
+    <aside class="callout">
+      <h3>What cannot be missed</h3>
+      <p>All 12 story trophies (the chapter trophies and the named missions) pop as you play. The six side-story finales — Kenton, Billy, Andy, Randy, Tyrone and Bret — stay available after the story, and every free-roam trophy does too. The only thing the game never gives back is a missed moment inside a chapter you have already finished.</p>
+      <p class="callout-source">Sources: <a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag — GTA 6 Trophy List</a> and <a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series">GTABase — GTA 6 Trophy Guide</a>.</p>
+    </aside>
+  </section>
+
+  <section id="view-sources" class="view" aria-label="Sources">
+    <h2>Sources &amp; how this guide was built</h2>
+    <p class="section-intro">Trophy names, descriptions and grades are shown exactly as PlayStation publishes them. Every guide below is written in this guide&rsquo;s own words; where a fact comes from a published guide, that guide is named beside the trophy it supports, so a reader can check it. Nothing here is copied from another guide.</p>
+    <h3>The official list</h3>
+    <ul class="source-list">
+      <li><strong>Exophase</strong> — the GTA VI PlayStation 5 trophy list, the first public source of the official names, descriptions and grades (55 trophies: 1 platinum, 2 gold, 6 silver, 46 bronze; 28 hidden).</li>
+      <li><strong>PSNProfiles</strong> — the GTA VI trophy list, cross-checked against Exophase; the two agree on every name, description and grade.</li>
+    </ul>
+    <h3>Guides consulted (named beside each trophy)</h3>
+    <ul class="source-list">
+      <li><a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series">GTABase — GTA 6 Trophy Guide &amp; Achievements List (PS5 &amp; Xbox Series X|S)</a>, published 18 November 2026 — full list with per-trophy unlock tips, roadmap and 100% completion requirements.</li>
+      <li><a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag — GTA 6 Trophy List: All 55 Trophies and Achievements</a> — full list with official descriptions, missable warnings and per-trophy methods.</li>
+      <li><a href="https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/">KeenGamer — GTA 6 Trophy Guide &amp; Platinum Roadmap – All 55 Trophies</a> — roadmap and the Positive Mental Attitude missable warning.</li>
+      <li><a href="https://press-start.com.au/news/2026/11/18/gta-6-trophy-list/">Press Start — Here&rsquo;s The Full Trophy/Achievement List For Grand Theft Auto 6</a> — launch-week confirmation of the 55-trophy list.</li>
+      <li><a href="https://www.radiotimes.com/technology/gaming/gta-6-trophies-achievements-list/">Radio Times — GTA 6 trophy guide: Full list of trophies and achievements</a> — launch-week list.</li>
+      <li><a href="https://www.planetgta6.com/en/gta-6-trophies/">Planet GTA 6 — GTA 6 Trophies: All 55 trophies and Xbox achievements</a> — visible and hidden lists cross-checked with PSNProfiles and TrueAchievements.</li>
+    </ul>
+    <h3>What is still unconfirmed</h3>
+    <p>Five hidden trophies — In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There and Ten Pin — had no confirmed unlock method at launch. Their guides say so plainly and give only what the official description hints at, rather than guessing. The Fair Game trigger animal is likewise unconfirmed; the guide says so and points at the 15 Target Decks the 100% checklist needs anyway.</p>
+    <h3>About this guide</h3>
+    <p>Leonida Legend is an independent fan-made guide. It is not affiliated with, endorsed by, or connected to Rockstar Games or Sony Interactive Entertainment, and it uses no Rockstar logo, artwork, box art or game screenshots. Grand Theft Auto VI is developed and published by Rockstar Games. The guide runs entirely offline: it loads no network resource and stores your checklist only in your own browser.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Legend — an offline guide to the 55 PS5 trophies of Grand Theft Auto VI. Progress is saved in your browser (localStorage) and never leaves your machine. No Rockstar artwork, no network requests.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
